@@ -1,0 +1,41 @@
+
+
+
+{% block head %}
+
+<title>Credit Lead Detection</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Lead Detection</h1>
+
+    <div class="form">
+        <form action="/math" method="POST">
+            <label for="operation">.                                                  .</label>
+
+<select id="occupation" name="occupation">
+  <option value="entrepreneur">entrepreneur</option>
+  <option value="other">other</option>
+  <option value="salaried">salaried</option>
+  <option value="self_employed">self_employed</option>
+</select>
+<select id="Channel" name="Channel">
+  <option value="x1">x1</option>
+  <option value="x2">x2</option>
+  <option value="x3">x3</option>
+  <option value="x4">x4</option>
+</select>
+<select id="Is_active" name="Is_active">
+  <option value="no">no</option>
+  <option value="yes">yes</option>
+
+</select>
+            <input type="text" name="age" id="num1">
+            <input type="text" name="vintage_month" id="vintage_month">
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+</div>
+{% endblock %}

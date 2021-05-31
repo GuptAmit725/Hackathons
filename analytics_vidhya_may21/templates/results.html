@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="table-users">
+    {% if result == 1 %}
+      <div>
+      <h3>Congratulation!! you are eligible for our products.</h3>
+      </div>
+    {% elif result == 0 %}
+        <div>
+        <h3 text-align = center>We regret that we currently do not have any product siting your profile.</h3>
+        </div>
+      {%endif%}
+  </div>
+</body>
+</html>
